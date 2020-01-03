@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/favorites_fragment_dest">
+
+    <fragment
+        android:id="@+id/favorites_fragment_dest"
+        android:name="com.airoks.tbusschedulenew.presentation.favorites.FavoritesFragment"
+        android:label="Favorite stops"/>
+
+    <fragment
+        android:id="@+id/stops_fragment_dest"
+        android:name="com.airoks.tbusschedulenew.presentation.stops.StopsFragment"
+        android:label="Stops"/>
+
+    <fragment
+        android:id="@+id/routes_fragment_dest"
+        android:name="com.airoks.tbusschedulenew.presentation.routes.RoutesFragment"
+        android:label="Routes"/>
+
+</navigation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="AlwaysShowAction">
+
+    <item
+        android:id="@+id/navigation_main"
+        android:icon="@drawable/ic_star_black"
+        android:enabled="true"
+        android:title=""
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_stops"
+        android:icon="@drawable/ic_park_bench_black"
+        android:enabled="true"
+        android:title=""
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_routs"
+        android:icon="@drawable/ic_bus_black"
+        android:enabled="true"
+        android:title=""
+        app:showAsAction="always"/>
+
+</menu>
