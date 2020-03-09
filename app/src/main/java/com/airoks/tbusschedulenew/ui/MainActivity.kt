@@ -1,4 +1,4 @@
-package com.airoks.tbusschedulenew.presentation
+package com.airoks.tbusschedulenew.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

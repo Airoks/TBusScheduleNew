@@ -1,4 +1,4 @@
-package com.airoks.tbusschedulenew.presentation.routes
+package com.airoks.tbusschedulenew.ui.routes
 
 import android.os.Bundle
 import android.view.LayoutInflater

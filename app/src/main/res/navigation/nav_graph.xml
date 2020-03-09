@@ -6,17 +6,17 @@
 
     <fragment
         android:id="@+id/favorites_fragment_dest"
-        android:name="com.airoks.tbusschedulenew.presentation.favorites.FavoritesFragment"
+        android:name="com.airoks.tbusschedulenew.ui.favorites.FavoritesFragment"
         android:label="Favorite stops"/>
 
     <fragment
         android:id="@+id/stops_fragment_dest"
-        android:name="com.airoks.tbusschedulenew.presentation.stops.StopsFragment"
+        android:name="com.airoks.tbusschedulenew.ui.stops.StopsFragment"
         android:label="Stops"/>
 
     <fragment
         android:id="@+id/routes_fragment_dest"
-        android:name="com.airoks.tbusschedulenew.presentation.routes.RoutesFragment"
+        android:name="com.airoks.tbusschedulenew.ui.routes.RoutesFragment"
         android:label="Routes"/>
 
 </navigation>
