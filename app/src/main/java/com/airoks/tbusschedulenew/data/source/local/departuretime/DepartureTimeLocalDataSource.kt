@@ -1,6 +1,6 @@
 package com.airoks.tbusschedulenew.data.source.local.departuretime
 
-import com.airoks.tbusschedulenew.data.repository.DepartureTimeDataSource
+import com.airoks.tbusschedulenew.data.repository.DepartureTimeContract
 import com.airoks.tbusschedulenew.domain.entity.DepartureTime
 import com.airoks.tbusschedulenew.presentation.CoroutineContextProvider
 import kotlinx.coroutines.withContext
@@ -8,7 +8,7 @@ import kotlinx.coroutines.withContext
 class DepartureTimeLocalDataSource(
     private val departureTimeDao: DepartureTimeDao,
     private val contextProvider: CoroutineContextProvider
-) : DepartureTimeDataSource {
+) : DepartureTimeContract.DataSource {
 
     override suspend fun saveDepartureTime(
         departureTime: List<DepartureTime>

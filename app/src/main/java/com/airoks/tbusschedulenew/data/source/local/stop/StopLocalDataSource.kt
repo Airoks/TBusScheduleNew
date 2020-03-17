@@ -1,7 +1,7 @@
 package com.airoks.tbusschedulenew.data.source.local.stop
 
 import com.airoks.tbusschedulenew.data.Result
-import com.airoks.tbusschedulenew.data.repository.StopDataSource
+import com.airoks.tbusschedulenew.data.repository.StopContract
 import com.airoks.tbusschedulenew.domain.entity.Stop
 import com.airoks.tbusschedulenew.domain.entity.StopWithRouts
 import com.airoks.tbusschedulenew.presentation.CoroutineContextProvider
@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 class StopLocalDataSource(
     private val stopDao: StopDao,
     private val contextProvider: CoroutineContextProvider
-) : StopDataSource {
+) : StopContract.DataSource {
 
     override suspend fun saveStops(stops: List<Stop>) = withContext(contextProvider.IO) {
         stopDao.insert(stops)

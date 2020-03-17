@@ -1,7 +1,7 @@
 package com.airoks.tbusschedulenew.data.source.local.schedule
 
 import com.airoks.tbusschedulenew.data.Result
-import com.airoks.tbusschedulenew.data.repository.ScheduleDataSource
+import com.airoks.tbusschedulenew.data.repository.ScheduleContract
 import com.airoks.tbusschedulenew.domain.entity.Schedule
 import com.airoks.tbusschedulenew.domain.entity.ScheduleWithDepartureTime
 import com.airoks.tbusschedulenew.presentation.CoroutineContextProvider
@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 class ScheduleLocalDataSource(
     private val scheduleDao: ScheduleDao,
     private val contextProvider: CoroutineContextProvider
-) : ScheduleDataSource {
+) : ScheduleContract.DataSource {
 
     override suspend fun saveSchedules(schedules: List<Schedule>) = withContext(contextProvider.IO) {
         scheduleDao.insert(schedules)
