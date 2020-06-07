@@ -1,7 +1,7 @@
 package com.airoks.tbusschedulenew.data.source.local.flight
 
 import com.airoks.tbusschedulenew.data.Result
-import com.airoks.tbusschedulenew.data.repository.FlightContract
+import com.airoks.tbusschedulenew.data.repository.flight.FlightDataSource
 import com.airoks.tbusschedulenew.domain.entity.Flight
 import com.airoks.tbusschedulenew.domain.entity.FlightWithDirections
 import com.airoks.tbusschedulenew.presentation.CoroutineContextProvider
@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 class FlightLocalDataSource(
     private val flightDao: FlightDao,
     private val contextProvider: CoroutineContextProvider
-) : FlightContract.DataSource {
+) : FlightDataSource {
 
     override suspend fun saveFlights(flights: List<Flight>) = withContext(contextProvider.IO) {
         flightDao.insert(flights)

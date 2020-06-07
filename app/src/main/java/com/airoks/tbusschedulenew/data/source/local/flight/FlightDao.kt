@@ -12,6 +12,9 @@ interface FlightDao : BaseDao<Flight> {
     @Query("SELECT * FROM Flight WHERE id = :id")
     suspend fun getDirectionsByFlightId(id: Long): FlightWithDirections?
 
-    @Query("SELECT * FROM Flight WHERE Flight.type_id = :type")
+    @Query("SELECT * FROM Flight")
     suspend fun getFlightsByType(type: Int): List<Flight>?
+
+    @Query("SELECT * FROM Flight WHERE Flight.type_id = :type LIMIT :limit OFFSET :offset")
+    suspend fun getFlightsByType(type: Int, limit: Int, offset: Int): List<Flight>?
 }

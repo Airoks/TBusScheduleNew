@@ -1,7 +1,7 @@
 package com.airoks.tbusschedulenew.data.source.local.direction
 
 import com.airoks.tbusschedulenew.data.Result
-import com.airoks.tbusschedulenew.data.repository.DirectionContract
+import com.airoks.tbusschedulenew.data.repository.direction.DirectionDataSource
 import com.airoks.tbusschedulenew.domain.entity.Direction
 import com.airoks.tbusschedulenew.domain.entity.DirectionWithRouts
 import com.airoks.tbusschedulenew.presentation.CoroutineContextProvider
@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 class DirectionLocalDataSource(
     private val directionDao: DirectionDao,
     private val contextProvider: CoroutineContextProvider
-) : DirectionContract.DataSource {
+) : DirectionDataSource {
 
     override suspend fun saveDirections(directions: List<Direction>) = withContext(contextProvider.IO) {
         directionDao.insert(directions)
